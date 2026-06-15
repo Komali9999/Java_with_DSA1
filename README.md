@@ -7,3 +7,13 @@ oop's
 function
 multithreading
 array
+
+DSA:
+Array
+LinkedList
+Stack
+Queue
+Trees
+Sorting Techniques
+Searching Techniques
+Algorithm
