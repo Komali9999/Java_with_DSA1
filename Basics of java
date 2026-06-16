@@ -1,1 +1,274 @@
+Q1. What is Java?
+Java is a high-level, object-oriented programming language used to build software applications.
+It is platform-independent because it runs on JVM (Java Virtual Machine).
+Java follows the principle “Write Once, Run Anywhere”.
+ex:
+public class Hello {
+    public static void main(String[] args) {
+        System.out.println("Hello Java");
+    }
+}
 
+Q2. What are control statements?
+Control statements are used to control the flow of execution in a program.
+They decide which block of code should execute based on conditions or repetition.
+They include decision-making, looping, and jump statements.
+ex:
+int marks = 75;
+
+if (marks >= 60)
+    System.out.println("Pass");
+else
+    System.out.println("Fail");
+
+Q3. Difference between while and do-while loop?
+The while loop checks the condition first before executing the code block.
+The do-while loop executes the code at least once before checking the condition.
+So, do-while guarantees one execution even if the condition is false.
+ex:
+int j = 10;
+
+do {
+    System.out.println(j);
+} while (j < 5);
+
+Q4. What are operators in Java?
+Operators are special symbols used to perform operations on variables and values.
+They are used for arithmetic, comparison, logical operations, and assignments.
+They help in performing calculations and decision-making in programs.
+ex:
+int a = 10, b = 3;
+
+System.out.println(a % b);
+System.out.println(a > b && b > 0);
+
+int max = (a > b) ? a : b;
+
+Q5. What is a String?
+A String is a sequence of characters used to store text in Java.
+It is immutable, meaning its value cannot be changed after creation.
+Any modification creates a new String object in memory.
+ex:
+String s1 = "Hello";
+String s2 = s1.concat(" World");
+
+System.out.println(s1);
+System.out.println(s2);
+
+Q6. What are String methods?
+String methods are built-in functions used to manipulate text data.
+They help in finding length, extracting parts, and searching text.
+They make string handling easier and more efficient.
+ex:
+String s = "Java Programming";
+
+System.out.println(s.length());
+System.out.println(s.substring(0, 4));
+System.out.println(s.indexOf("Pro"));
+
+Q7. String vs StringBuilder vs StringBuffer?
+String is immutable, so every modification creates a new object.
+StringBuilder is mutable and faster but not thread-safe.
+StringBuffer is mutable and thread-safe but slightly slower.
+ex:
+StringBuilder sb = new StringBuilder("Hi");
+sb.append(" There");
+
+System.out.println(sb);
+
+Q8. What are OOP concepts?
+OOP is a programming style based on objects and classes.
+It helps in organizing code using real-world modeling concepts.
+Its four pillars are Encapsulation, Inheritance, Polymorphism, and Abstraction.
+ex:
+class Animal {
+    void eat() {
+        System.out.println("eats");
+    }
+}
+
+Q9. What is Encapsulation?
+Encapsulation means wrapping data and methods into a single unit (class).
+It hides data using private variables and provides access through methods.
+It improves security and prevents direct modification of data.
+ex:
+class Account {
+    private double balance;
+
+    void deposit(double amt) {
+        balance += amt;
+    }
+
+    double getBalance() {
+        return balance;
+    }
+}
+
+Q10. What is Inheritance?
+Inheritance allows one class to acquire properties of another class.
+It promotes code reusability and reduces redundancy.
+It creates a parent-child relationship between classes.
+ex:
+class Animal {
+    void eat() {
+        System.out.println("eats");
+    }
+}
+ex:
+class Dog extends Animal {
+    void bark() {
+        System.out.println("barks");
+    }
+}
+
+Q11. What is Polymorphism?
+Polymorphism means “many forms” of a method or object.
+It allows the same method to behave differently in different situations.
+It improves flexibility and reusability of code.
+ex:
+class Animal {
+    void sound() {
+        System.out.println("Animal sound");
+    }
+}
+ex:
+class Cat extends Animal {
+    void sound() {
+        System.out.println("Meow");
+    }
+}
+
+Q12. What is Abstraction?
+Abstraction hides internal implementation details and shows only essential features.
+It reduces complexity by focusing on what an object does instead of how.
+It is achieved using abstract classes or interfaces.
+ex:
+abstract class Shape {
+    abstract void draw();
+}
+
+Q13. What is a Constructor?
+A constructor is a special method used to initialize objects.
+It is called automatically when an object is created.
+It has the same name as the class and no return type.
+ex:
+class Student {
+    String name;
+
+    Student(String n) {
+        name = n;
+    }
+}
+
+Q14. this vs super keyword?
+this refers to the current class object.
+super refers to the parent class object.
+They are used to differentiate variables and access parent properties.
+ex:
+class Parent {
+    int x = 10;
+}
+ex:
+class Child extends Parent {
+    int x = 20;
+
+    void show() {
+        System.out.println(this.x);
+        System.out.println(super.x);
+    }
+}
+
+Multithreading
+Q15. What is Multithreading?
+Multithreading allows multiple tasks to run at the same time.
+Each thread runs independently but shares the same memory.
+It improves performance and CPU utilization.
+ex:
+class MyThread extends Thread {
+    public void run() {
+        System.out.println("Thread running");
+    }
+}
+
+Q16. What is Synchronization?
+Synchronization is used to control access to shared resources.
+It ensures that only one thread accesses a resource at a time.
+It prevents data inconsistency and race conditions.
+ex:
+class Counter {
+    int count = 0;
+
+    synchronized void increment() {
+        count++;
+    }
+}
+
+Arrays
+Q17. What is an Array?
+An array is a data structure that stores multiple values of the same type.
+It uses index-based access starting from 0.
+It has fixed size and provides fast access to elements.
+ex:
+int[] arr = {10, 20, 30};
+
+System.out.println(arr[1]);
+
+DSA SECTION
+Q18. What is an Array in DSA?
+Array is a linear data structure with contiguous memory allocation.
+It provides constant time access using index.
+Insertion and deletion are costly due to shifting of elements.
+
+Q19. What is Linked List?
+A Linked List is a linear data structure made of nodes.
+Each node contains data and a reference to the next node.
+It allows dynamic memory allocation and easy insertion/deletion.
+ex:
+class Node {
+    int data;
+    Node next;
+}
+
+Q20. What is Stack?
+Stack follows LIFO (Last In First Out) principle.
+Insertion and deletion happen only from one end called top.
+It is used in recursion, undo operations, and expression evaluation.
+ex:
+Stack<Integer> st = new Stack<>();
+st.push(10);
+st.pop();
+
+Q21. What is Queue?
+Queue follows FIFO (First In First Out) principle.
+Insertion happens at rear and deletion at front.
+It is used in scheduling and BFS traversal.
+ex:
+Queue<Integer> q = new LinkedList<>();
+q.add(10);
+q.poll();
+
+Q22. What is a Tree?
+A tree is a hierarchical data structure with nodes and edges.
+It has a root node and child nodes forming levels.
+It is widely used in databases and file systems.
+ex:
+     10
+    /  \
+   5    15
+
+Q23. What is Sorting?
+Sorting is arranging data in ascending or descending order.
+It improves searching and data processing efficiency.
+Common algorithms are Bubble, Selection, Insertion, Merge, and Quick sort.
+
+Q24. What is Searching?
+Searching is finding an element in a data structure.
+Linear search checks each element one by one.
+Binary search divides search space and works on sorted data.
+
+Q25. What is an Algorithm?
+An algorithm is a step-by-step procedure to solve a problem.
+It must be finite, clear, and efficient.
+It takes input, processes it, and produces output.
+Algorithms are analyzed using time and space complexity.
+They help in designing efficient solutions for problems.
