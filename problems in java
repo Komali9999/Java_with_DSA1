@@ -1,1 +1,239 @@
+Q1. Write a program to check even or odd number
+Problem: Given a number, check whether it is even or odd.
+Solution Idea:
+A number is even if divisible by 2.
+Otherwise, it is odd.
+We use modulus operator %.
 
+int n = 10;
+
+if (n % 2 == 0)
+    System.out.println("Even");
+else
+    System.out.println("Odd");
+
+Q2. Find factorial of a number
+Problem: Calculate factorial of n.
+Solution Idea:
+Factorial means multiplying numbers from 1 to n.
+We use a loop to multiply step by step.
+Initialize result as 1.
+
+int n = 5;
+int fact = 1;
+
+for (int i = 1; i <= n; i++) {
+    fact = fact * i;
+}
+
+System.out.println(fact);
+
+Q3. Reverse a number
+Problem: Reverse digits of a number.
+Solution Idea:
+Extract last digit using % 10.
+Build reversed number using multiplication by 10.
+Remove last digit using / 10.
+
+int n = 1234;
+int rev = 0;
+
+while (n > 0) {
+    int digit = n % 10;
+    rev = rev * 10 + digit;
+    n = n / 10;
+}
+System.out.println(rev);
+
+Q4. Check palindrome number
+Problem: Check if number reads same forward and backward.
+Solution Idea:
+Reverse the number.
+Compare original and reversed.
+If equal → palindrome.
+
+int n = 121;
+int temp = n;
+int rev = 0;
+
+while (n > 0) {
+    rev = rev * 10 + (n % 10);
+    n = n / 10;
+}
+
+if (temp == rev)
+    System.out.println("Palindrome");
+else
+    System.out.println("Not Palindrome");
+
+Array Problems
+Q5. Find largest element in array
+Problem: Find maximum element.
+Solution Idea:
+Assume first element as max.
+Compare with all elements.
+Update if larger found.
+int[] arr = {3, 7, 2, 9, 5};
+int max = arr[0];
+
+for (int i = 1; i < arr.length; i++) {
+    if (arr[i] > max)
+        max = arr[i];
+}
+
+System.out.println(max);
+
+Q6. Find second largest element
+Problem: Find second maximum.
+Solution Idea:
+Track largest and second largest.
+Update both while traversing.
+Avoid duplicates.
+
+int[] arr = {10, 20, 5, 40};
+
+int first = Integer.MIN_VALUE;
+int second = Integer.MIN_VALUE;
+
+for (int i = 0; i < arr.length; i++) {
+    if (arr[i] > first) {
+        second = first;
+        first = arr[i];
+    } else if (arr[i] > second && arr[i] != first) {
+        second = arr[i];
+    }
+}
+
+System.out.println(second);
+
+Q7. Reverse array
+Problem: Reverse elements in array.
+Solution Idea:
+Use two pointers.
+Swap left and right elements.
+Move inward.
+
+int[] arr = {1, 2, 3, 4};
+
+int left = 0, right = arr.length - 1;
+
+while (left < right) {
+    int temp = arr[left];
+    arr[left] = arr[right];
+    arr[right] = temp;
+
+    left++;
+    right--;
+}
+
+String Problems
+Q8. Check palindrome string
+Problem: Check if string is palindrome.
+Solution Idea:
+Reverse string manually.
+Compare with original.
+Case-sensitive comparison.
+
+String s = "madam";
+String rev = "";
+
+for (int i = s.length() - 1; i >= 0; i--) {
+    rev += s.charAt(i);
+}
+
+if (s.equals(rev))
+    System.out.println("Palindrome");
+else
+    System.out.println("Not Palindrome");
+
+Q9. Count vowels in string
+Problem: Count vowels.
+Solution Idea:
+Check each character.
+Match with vowels a,e,i,o,u.
+Increment counter.
+
+String s = "hello";
+int count = 0;
+
+for (int i = 0; i < s.length(); i++) {
+    char c = s.charAt(i);
+
+    if (c == 'a' || c == 'e' || c == 'i'
+        || c == 'o' || c == 'u') {
+        count++;
+    }
+}
+
+System.out.println(count);
+
+ DSA Problems
+Q10. Linear Search
+Problem: Find element in array.
+Solution Idea:
+Check each element one by one.
+Return index if found.
+Else return -1.
+
+int[] arr = {2, 5, 7, 9};
+int target = 7;
+
+for (int i = 0; i < arr.length; i++) {
+    if (arr[i] == target) {
+        System.out.println(i);
+        break;
+    }
+}
+
+Q11. Binary Search
+Problem: Search in sorted array.
+Solution Idea:
+Divide array into halves.
+Compare middle element.
+Reduce search space.
+
+int[] arr = {1, 3, 5, 7, 9};
+int target = 7;
+
+int left = 0, right = arr.length - 1;
+
+while (left <= right) {
+    int mid = (left + right) / 2;
+
+    if (arr[mid] == target) {
+        System.out.println(mid);
+        break;
+    } else if (arr[mid] < target) {
+        left = mid + 1;
+    } else {
+        right = mid - 1;
+    }
+}
+
+Q12. Stack operation
+Problem: Perform push and pop.
+Solution Idea:
+Stack follows LIFO.
+Last inserted is removed first.
+Use push/pop operations.
+
+Stack<Integer> st = new Stack<>();
+
+st.push(10);
+st.push(20);
+
+System.out.println(st.pop());
+
+Q13. Queue operation
+Problem: Perform queue operations.
+Solution Idea:
+Queue follows FIFO.
+First inserted is removed first.
+Use add/poll.
+
+Queue<Integer> q = new LinkedList<>();
+
+q.add(10);
+q.add(20);
+
+System.out.println(q.poll());
