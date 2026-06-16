@@ -1,1 +1,152 @@
+Q1. Can you explain Java?
+A:
+Java is a high-level, object-oriented programming language used to build applications.
+It is platform-independent because code runs on JVM, not directly on OS.
+This makes Java portable and widely used in backend systems and Android development.
 
+Q2. What are the features of Java?
+A:
+Java has several important features that make it powerful and widely used.
+It is simple, secure, object-oriented, and platform-independent.
+It also supports multithreading and automatic memory management.
+
+Q3. What are control statements in Java?
+A:
+Control statements decide the flow of execution in a program.
+They help in making decisions and repeating tasks based on conditions.
+Examples include if-else, switch, for loop, and while loop.
+
+Q4. Difference between while and do-while loop?
+A:
+A while loop checks condition first, then executes the code.
+A do-while loop executes the code at least once before checking condition.
+So, do-while guarantees one execution even if condition is false.
+
+Q5. What are operators in Java?
+A:
+Operators are symbols used to perform operations on variables and values.
+They include arithmetic, relational, logical, and assignment operators.
+They are used to perform calculations and decision-making in programs.
+
+Q6. What is String in Java?
+A:
+A String is a sequence of characters used to store text data.
+It is immutable, meaning its value cannot be changed after creation.
+Any modification creates a new object in memory.
+
+Q7. Difference between String, StringBuilder, and StringBuffer?
+A:
+String is immutable and creates new objects on modification.
+StringBuilder is mutable and faster but not thread-safe.
+StringBuffer is mutable and thread-safe but slower than StringBuilder.
+
+Q8. What are OOP concepts?
+A:
+OOP is a programming paradigm based on objects and classes.
+It improves code reusability and organization.
+Its main pillars are encapsulation, inheritance, polymorphism, and abstraction.
+
+Q9. What is encapsulation?
+A:
+Encapsulation means wrapping data and methods into a single unit.
+It hides data using private variables and provides access via methods.
+It improves security and prevents direct modification of data.
+
+Q10. What is inheritance?
+A:
+Inheritance allows one class to acquire properties of another class.
+It promotes code reuse and reduces duplication.
+It forms a parent-child relationship between classes.
+
+Q11. What is polymorphism?
+A:
+Polymorphism means one method having many forms.
+It allows the same method to behave differently in different classes.
+It is achieved using method overloading and overriding.
+
+Q12. What is abstraction?
+A:
+Abstraction hides implementation details and shows only essential features.
+It reduces complexity and increases code clarity.
+It is achieved using abstract classes and interfaces.
+
+Q13. What is a constructor?
+A:
+A constructor is a special method used to initialize objects.
+It is called automatically when an object is created.
+It has the same name as the class and no return type.
+
+Q14. Difference between this and super?
+A:
+this refers to the current class object.
+super refers to the parent class object.
+They are used to access variables and methods of different levels.
+
+ Multithreading
+Q15. What is multithreading?
+A:
+Multithreading allows multiple tasks to run simultaneously.
+Each thread runs independently but shares memory.
+It improves performance and CPU utilization.
+
+Q16. What is synchronization?
+A:
+Synchronization is used to control access to shared resources.
+It ensures only one thread accesses a resource at a time.
+It prevents data inconsistency and race conditions.
+
+Arrays
+Q17. What is an array?
+A:
+An array is a data structure that stores multiple elements of same type.
+It uses index-based access starting from zero.
+It has fixed size and allows fast access.
+
+DSA Interview Questions
+Q18. What is an array in DSA?
+A:
+Array is a linear data structure stored in contiguous memory.
+It provides constant time access using index.
+Insertion and deletion are costly due to shifting elements.
+
+Q19. What is a linked list?
+A:
+A linked list is a linear data structure made of nodes.
+Each node contains data and reference to the next node.
+It allows dynamic memory allocation and easy insertion/deletion.
+
+Q20. What is a stack?
+A:
+Stack follows LIFO (Last In First Out) principle.
+Insertion and deletion happen from the top only.
+It is used in recursion, undo operations, and function calls.
+
+Q21. What is a queue?
+A:
+Queue follows FIFO (First In First Out) principle.
+Insertion happens at rear and deletion at front.
+It is used in scheduling and BFS traversal.
+
+Q22. What is a tree?
+A:
+A tree is a hierarchical data structure with nodes.
+It has a root node and child nodes forming levels.
+It is widely used in databases and file systems.
+
+Q23. What is sorting?
+A:
+Sorting is arranging data in ascending or descending order.
+It improves searching and processing efficiency.
+Common algorithms include bubble, selection, insertion, merge, and quick sort.
+
+Q24. What is searching?
+A:
+Searching is finding an element in a data structure.
+Linear search checks each element one by one.
+Binary search divides data and works only on sorted arrays.
+
+Q25. What is an algorithm?
+A:
+An algorithm is a step-by-step procedure to solve a problem.
+It must be finite, clear, and efficient.
+It takes input, processes it, and produces output.
