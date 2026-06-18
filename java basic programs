@@ -1,1 +1,285 @@
+Sum of array
+import java.util.Scanner;
+public class day{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int a[]=new int[n];
+        
+        for(int i=0;i<n;i++){
+            a[i]=sc.nextInt();
+        }for(int i=0;i<n;i++){
+            System.out.println(a[i]);
+        }
+        int sum=0;
+        for(int i=0;i<n;i++){
+            sum=sum+a[i];
+        }
+        System.out.println(sum);
+    }
+}
+output
 
+5
+10
+20
+50
+80
+100
+10
+20
+50
+80
+100
+260
+hallow rhombus
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        for (int row = 1; row <= n; row++) {
+
+            
+            for (int col = 1; col <= n - row; col++) {
+                System.out.print(" ");
+            }
+
+            
+            for (int col = 1; col <= n; col++) {
+
+                if (row == 1 || row == n || col == 1 || col == n) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+
+            System.out.println();
+        }
+
+        sc.close();
+    }
+}
+output
+ *****
+   *   *
+  *   *
+ *   *
+*****
+largest array:
+import java.util.Scanner;
+
+public class Larray {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int a[] = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            a[i] = sc.nextInt();
+        }
+
+        int max = a[0];  // initialize with first element
+
+        for (int i = 1; i < n; i++) {
+            if (a[i] > max) {
+                max = a[i];
+            }
+        }
+
+        System.out.println(max);
+
+        sc.close();
+    }
+}
+output
+5
+12 23 45 87 58
+87
+Hallow square:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter value of n: ");
+        int n = sc.nextInt();
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                if (i == 1 || i == n || j == 1 || j == n) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+
+        sc.close();
+    }
+}
+output:
+Enter value of n: 5
+* * * * * 
+*       * 
+*       * 
+*       * 
+* * * * * 
+Hallow triangle;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter value of n: ");
+        int n = sc.nextInt();
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+
+                // print star only on boundary
+                if (i == n || j == 1 || j == i) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+
+        sc.close();
+    }
+}
+output:
+6Enter value of n: 
+* 
+* * 
+*   * 
+*     * 
+*       * 
+* * * * * * 
+Smallest array:
+import java.util.Scanner;
+public class small{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int a[]=new int[n];
+        for(int i=0;i<n;i++){
+            a[i]=sc.nextInt();
+            System.out.println(a[i]);
+        }
+        int min=a[0];
+        for(int i=1;i<n;i++){
+            if(a[i]<min){
+                min=a[i];
+            }
+        }
+        System.out.println(min);
+    }
+}
+output:
+5
+12 34 25 36 10 
+12
+34
+25
+36
+10
+10
+sorting array(acsending order):
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class SortArray {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+
+        for(int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        Arrays.sort(arr);
+
+        for(int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
+        sc.close();
+    }
+}
+output:
+5
+12 23 5 10 9
+5 9 10 12 23 
+sorting array(Descending order):
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class SortArray {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+
+        for(int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        Arrays.sort(arr);
+
+        // Print in descending order
+        for(int i = n - 1; i >= 0; i--) {
+            System.out.print(arr[i] + " ");
+        }
+
+        sc.close();
+    }
+}
+output:
+5
+76 23 10 45 0
+76 45 23 10 0 
+Right rotation:
+import java.util.Scanner;
+
+public class RightRotate {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+
+        for(int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        int last = arr[n - 1];
+
+        for(int i = n - 1; i > 0; i--) {
+            arr[i] = arr[i - 1];
+        }
+
+        arr[0] = last;
+
+        for(int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+output:
+5
+1 4 2 7 9
+9 1 4 2 7 
