@@ -1,1 +1,37 @@
+1.Add and removing numbers in queues:
+import java.util.*;
+public class main{
+    public static void main(String[] args){
+        Queue<Integer> eg=new LinkedList<>();
+        eg.add(10);
+        eg.offer(20);
+        eg.offer(30);
+        eg.offer(40);
+        eg.remove();
+        eg.poll();
+        System.out.println(eg.peek());
+        System.out.print(eg);
+    }
+}
+output:
+30
+[30, 40]
+2.Double eneded queue example:
+import java.util.*;
+public class main{
+    public static void main(String[] args){
+        Deque<Integer> dq=new LinkedList<>();
+        dq.addFirst(10);
+        dq.offerFirst(20);
+        dq.addLast(30);
+        dq.offerLast(40);
+        System.out.println(dq);
+        System.out.println(dq.peekFirst());
+        System.out.println(dq.peekLast());
+    }
+}
+output:
+[20, 10, 30, 40]
+20
+40
 
