@@ -54,4 +54,80 @@ public class main{
 }
 output:
 12
+3.prime factiorization:
+import java.util.Scanner;
+public class main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+        int den=2;
+        while(num>1){
+        while(num%den==0){
+            num/=den;
+            System.out.print(den +" ");
+            System.out.println("num = "+ num);
+        }
+        den++;
+    }
+}
+}
+output:
+60
+2 num = 30
+2 num = 15
+3 num = 5
+5 num = 1
+4.Sliding window(maximum) example:
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {56, 29, 73, 27, 11, 13, 17, 12};
+        int k = 3, left = 0, sum = 0,max=Integer.MIN_VALUE;
+
+        for (int right = 0; right < arr.length; right++) {
+            sum += arr[right];
+
+            if (right >= k - 1) {
+                
+                max=Math.max(max,sum);
+                sum -= arr[left];   
+                left++;
+            }
+        }
+        System.out.println(max+" ");
+    }
+}
+output:
+158
+5.sliding window(maximum number):
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {11, 29, 73, 27, 56, 13, 17, 12};
+        int k = 3;
+
+        for (int i = 0; i <= arr.length - k; i++) {
+            int maximum = Integer.MIN_VALUE;
+
+            for (int start = i; start < i + k; start++) {
+                maximum = Math.max(maximum, arr[start]);
+            }
+
+            System.out.print(maximum + " ");
+        }
+    }
+}
+output:
+73 73 73 56 56 17 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
